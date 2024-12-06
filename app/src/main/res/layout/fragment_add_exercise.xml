@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_marginBottom="66dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your exercises"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Exercise Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type of activity"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/kanit"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/exercise_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/static_exercise_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Static"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/cardio_exercise_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cardio" />
+        </RadioGroup>
+
+        <!-- Exercise Selection Dropdown -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/kanit"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/exercise_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Static Exercise Details -->
+        <LinearLayout
+            android:id="@+id/static_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/series_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of series"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kanit" />
+
+            <EditText
+                android:id="@+id/repetitions_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of repetitions"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kanit" />
+
+            <EditText
+                android:id="@+id/static_time_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total time (minutes)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kanit" />
+        </LinearLayout>
+
+        <!-- Cardio Exercise Details -->
+        <LinearLayout
+            android:id="@+id/cardio_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/distance_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Distance traveled (km)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kanit" />
+
+            <EditText
+                android:id="@+id/cardio_time_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total time (minutes)"
+                android:inputType="number"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kanit" />
+        </LinearLayout>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/green"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:elevation="4dp" />
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Exercises performed"/>
+
+        <!-- ScrollView pour afficher les exercices -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/exercise_list_layout">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>

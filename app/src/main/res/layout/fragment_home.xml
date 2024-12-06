@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <!-- Section Day Streak -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/day_streak_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days Streak :  "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/kanit"/>
+
+        <TextView
+            android:id="@+id/day_streak_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
+
+        <!-- ImageView pour l'icône de feu -->
+        <ImageView
+            android:id="@+id/fire_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_fire"
+            app:tint="#FF9800" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/kanit"
+        android:gravity="center"
+        android:text="Your training time in recent days"
+        android:textColor="@color/lightGray"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/lightGray2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontal_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/line_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bouton pour rediriger vers la page d'ajout d'exercice -->
+    <Button
+        android:id="@+id/add_exercise_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/green"
+        android:elevation="4dp"
+        android:text="Add exercises"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_recycler_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

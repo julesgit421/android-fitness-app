@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Fitness_App" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <!-- Creer le composant texte par defaut -->
+    <style name="DefaultTextStyle">
+        <item name="android:textColor">@color/lightGray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/kanit</item>
+    </style>
+
+    <!-- Creer le composant sous titre par defaut -->
+    <style name="SubtitleTextStyle" parent="DefaultTextStyle">
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
+
+    <!-- Creer le composant sous titre par defaut -->
+    <style name="TitleTextStyle" parent="SubtitleTextStyle">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- Creer un style pour la bottom navigation view -->
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/kanit</item>
+    </style>
+
+    <!-- Personnaliser la barre de navigation -->
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/kanit</item>
+    </style>
+
+</resources>

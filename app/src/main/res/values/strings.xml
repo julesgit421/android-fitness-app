@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Fitness Zone</string>
+
+    <string-array name="exercise_options">
+        <item>Pompes</item>
+        <item>Abdos</item>
+        <item>Traction</item>
+        <item>Sprint</item>
+        <item>Yoga</item>
+        <item>Marche</item>
+    </string-array>
+
+    <string-array name="static_exercises">
+        <item>Pompes</item>
+        <item>Abdos</item>
+        <item>Tractions</item>
+    </string-array>
+
+    <string-array name="cardio_exercises">
+        <item>Course</item>
+        <item>Marche</item>
+    </string-array>
+
+</resources>

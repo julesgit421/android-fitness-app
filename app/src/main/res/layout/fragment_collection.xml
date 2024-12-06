@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="90dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Statistics"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Horizontal ScrollView pour afficher les graphiques horizontalement -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <!-- Premier graphique (LineChart) -->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_time"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/lightGray2"/>
+
+                <!-- Deuxième graphique (BarChart) -->
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart_types"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/lightGray2"/>
+
+                <!-- Troisième graphique (LineChart) -->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart_distance"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@color/lightGray2"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Exercises performed"/>
+
+        <!-- Nouveau ScrollView pour afficher les exercices -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/exercise_list_layout">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>
